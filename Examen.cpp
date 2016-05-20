@@ -22,11 +22,41 @@ int main(int argc, char const *argv[])
 		}
 		if (opcion==2)
 		{
-			
+			int opcion2=1;
+			int contador=0;
+			char** todo=new char*[126];
+			for (int i = 0; i < 126; ++i)
+			{
+				todo[i]=new char[126];
+			}
+			char* palabras=new char[126];
+			while(opcion2!=0){								
+				cout<<"ingrese la palabra o frase que desea saber sus propiedades:"<<endl;	
+				cin.ignore(126,'\n');	
+				cin.getline(palabras,126,'\n');
+				revision(palabras);
+				strcpy(todo[contador],palabras);				
+				contador+=1;
+				cout<<"desea continuar\n1-si\n0-no";
+				cin>>opcion2;				
+			}
+			delete[] palabras;
+
+			for (int i = 0; i < 126; ++i)
+			{
+				if(strlen(todo[i])>0){
+					cout<<todo[i]<<endl;
+				}
+			}	
+			for (int i = 0; i <126; ++i)
+			{
+				delete[] todo[i];
+			}
+			delete[] todo;
 		}
 		if (opcion==3)
 		{
-			/* code */
+			char a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0,m=0,n=0,o=0,p=0,q=0,r=0,s=0,t=0,u=0,v=0,w=0,x=0,y=0,z=0;
 		}
 	}
 
@@ -53,6 +83,154 @@ void revision_pangrama(char* palabras){
 	}
 	
 }
-void revision(char*){
-
+void revision(char* palabras){
+	
+	int tama=strlen(palabras);
+	int letras=0,palabrs=1;
+	for (int i = 0; i <tama; ++i)
+	{
+		if(palabras[i]==' '){
+			palabrs+=1;
+		}else{
+			letras+=1;
+		}
+	}
+	cout<<"Cantidad de palabras: "<<palabrs<<endl;
+	cout<<"Cantidad de letras: "<<letras<<endl;
+	int a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0,m=0,n=0,o=0,p=0,q=0,r=0,s=0,t=0,u=0,v=0,w=0,x=0,y=0,z=0;
+	for (int i = 0; i < tama; ++i)
+	{
+		if (palabras[i]=='a')
+		{
+		 	a+=1;
+		}
+		if (palabras[i]=='b')
+		{
+		 	b+=1;
+		}
+		if (palabras[i]=='c')
+		{
+			c+=1;
+		}
+		if (palabras[i]=='d')
+		{
+			d+=1;
+		}
+		if (palabras[i]=='e')
+		{
+			e+=1;
+		}
+		if (palabras[i]=='f')
+		{
+			f+=1;
+		}
+		if (palabras[i]=='g')
+		{
+			g+=1;
+		}
+		if (palabras[i]=='h')
+		{
+			h+=1;
+		}
+		if (palabras[i]=='i')
+		{
+			i+=1;
+		}
+		if (palabras[i]=='j')
+		{
+			j+=1;
+		}
+		if (palabras[i]=='k')
+		{
+			k+=1;
+		}
+		if (palabras[i]=='l')
+		{
+			l+=1;
+		}
+		if (palabras[i]=='m')
+		{
+			m+=1;
+		}
+		if (palabras[i]=='n')
+		{
+			n+=1;
+		}
+		if (palabras[i]=='o')
+		{
+			o+=1;
+		}
+		if (palabras[i]=='p')
+		{
+			p+=1;
+		}
+		if (palabras[i]=='q')
+		{
+			q+=1;
+		}
+		if (palabras[i]=='r')
+		{
+			r+=1;
+		}
+		if (palabras[i]=='s')
+		{
+			s+=1;
+		}
+		if (palabras[i]=='t')
+		{
+			t+=1;
+		}
+		if (palabras[i]=='u')
+		{
+			v+=1;
+		}
+		if (palabras[i]=='v')
+		{
+			v+=1;
+		}
+		if (palabras[i]=='w')
+		{
+			w+=1;
+		}
+		if (palabras[i]=='x')
+		{
+			x+=1;
+		}
+		if (palabras[i]=='y')
+		{
+			y+=1;
+		}
+		if (palabras[i]=='z')
+		{
+			z+=1;
+		}
+	}
+	cout<<"Uso de letras:"<<endl;
+	cout<<"a usos:"<<a<<endl;
+	cout<<"b usos:"<<b<<endl;
+	cout<<"c usos:"<<c<<endl;
+	cout<<"d usos:"<<d<<endl;
+	cout<<"e usos:"<<e<<endl;
+	cout<<"f usos:"<<f<<endl;
+	cout<<"g usos:"<<g<<endl;
+	cout<<"h usos:"<<h<<endl;
+	cout<<"i usos:"<<i<<endl;
+	cout<<"j usos:"<<j<<endl;
+	cout<<"k usos:"<<k<<endl;
+	cout<<"l usos:"<<l<<endl;
+	cout<<"m usos:"<<m<<endl;
+	cout<<"n usos:"<<n<<endl;
+	cout<<"o usos:"<<o<<endl;
+	cout<<"p usos:"<<p<<endl;
+	cout<<"q usos:"<<q<<endl;
+	cout<<"r usos:"<<r<<endl;
+	cout<<"s usos:"<<s<<endl;
+	cout<<"t usos:"<<t<<endl;
+	cout<<"u usos:"<<u<<endl;
+	cout<<"v usos:"<<v<<endl;
+	cout<<"w usos:"<<w<<endl;
+	cout<<"x usos:"<<x<<endl;
+	cout<<"y usos:"<<y<<endl;
+	cout<<"z usos:"<<z<<endl;
+	
 }
