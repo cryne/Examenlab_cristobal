@@ -5,6 +5,8 @@ using std::cin;
 using std::endl;
 void revision_pangrama(char*);
 void revision(char*);
+void morse(char*);
+
 int main(int argc, char const *argv[])
 {
 	int opcion=0;
@@ -56,7 +58,11 @@ int main(int argc, char const *argv[])
 		}
 		if (opcion==3)
 		{
-			char a=0,b=0,c=0,d=0,e=0,f=0,g=0,h=0,i=0,j=0,k=0,l=0,m=0,n=0,o=0,p=0,q=0,r=0,s=0,t=0,u=0,v=0,w=0,x=0,y=0,z=0;
+			char* palabras=new char[126];
+			cout<<"ingrese la palabra o frase que desea saber sus propiedades:"<<endl;	
+			cin.ignore(126,'\n');	
+			cin.getline(palabras,126,'\n');
+			morse(palabras);
 		}
 	}
 
@@ -233,4 +239,129 @@ void revision(char* palabras){
 	cout<<"y usos:"<<y<<endl;
 	cout<<"z usos:"<<z<<endl;
 	
+}
+
+void morse(char* palabras){
+	char a[2]={'.','-'},b[4]={'-','.','.','.'},c[4]={'-','.','-','.'},d[3]={'-','.','.'},e[1]={'.'},f[4]={'.','.','-','.'},g[3]={'-','-','.'},h[4]={'.','.','.','.'},i[2]={'.','.'},j[4]={'.','-','-','-'},k[3]={'-','.','-'},l[4]={'.','-','.','.'},m[2]={'-','-'},n[2]={'-','.'},o[3]={'-','-','-'},p[4]={'.','-','-','.'},q[4]={'-','-','.','-'},r[3]={'.','-','.'},s[3]={'.','.','.'},t[1]={'-'},u[3]={'.','.','-'},v[4]={'.','.','.','v'},w[3]={'.','-','-'},x[4]={'-','.','.','-'},y[4]={'-','.','-','-'},z[4]={'-','-','.','.'};
+	int inicio=0,final;
+	int tama=strlen(palabras);
+	for (int op = 0; op < tama; ++op)
+	{
+		if(palabras[op]=='&'){
+			final=op;
+			char letr[final-inicio];
+			int contador=0;
+			for (int oj = final; oj >inicio; --oj)
+			{
+				letr[contador]=palabras[oj];
+				contador+=1;
+			}
+			cout<<letr;
+		if (letr==a)
+		{
+		 	cout<<"a";
+		}
+		if (letr==b)
+		{
+		 	cout<<"b";
+		}
+		if (letr==c)
+		{
+			cout<<"c";
+		}
+		if (letr==d)
+		{
+			cout<<"d";
+		}
+		if (letr==e)
+		{
+			cout<<"e";
+		}
+		if (letr==f)
+		{
+			cout<<"f";
+		}
+		if (letr==g)
+		{
+			cout<<"g";
+		}
+		if (letr==h)
+		{
+			cout<<"h";
+		}
+		if (letr==i)
+		{
+			cout<<"i";
+		}
+		if (letr==j)
+		{
+			cout<<"j";
+		}
+		if (letr==k)
+		{
+			cout<<"k";
+		}
+		if (letr==l)
+		{
+			cout<<"l";
+		}
+		if (letr==m)
+		{
+			cout<<"m";
+		}
+		if (letr==n)
+		{
+			cout<<"n";
+		}
+		if (letr==o)
+		{
+			cout<<"o";
+		}
+		if (letr==p)
+		{
+			cout<<"p";
+		}
+		if (letr==q)
+		{
+			cout<<"q";
+		}
+		if (letr==r)
+		{
+			cout<<"r";
+		}
+		if (letr==s)
+		{
+			cout<<"s";
+		}
+		if (letr==t)
+		{
+			cout<<"t";
+		}
+		if (letr==u)
+		{
+			cout<<"u";
+		}
+		if (letr==v)
+		{
+			cout<<"v";
+		}
+		if (letr==w)
+		{
+			cout<<"w";
+		}
+		if (letr==x)
+		{
+			cout<<"x";
+		}
+		if (letr==y)
+		{
+			cout<<"y";
+		}
+		if (letr==z)
+		{
+			cout<<"z";
+		}
+		}
+	}
+	cout<<endl;
 }
